@@ -6,7 +6,8 @@ class Crypter():
         super().__init__()
 
     def getMessage(self, fileName):
-        file = open(fileName)
+        
+        file = open("OOP/"+fileName)
         line = file.readline()
         file.close()
         return line
@@ -51,7 +52,7 @@ class Encrypter(Crypter):
         return encryptedMessage
     
     def saveMessage(self, message, fileName):
-        file = open(fileName+".txt", "w")
+        file = open("OOP/"+fileName+".txt", "w")
         file.write(message)
         file.close()
 
